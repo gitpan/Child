@@ -1,0 +1,7 @@
+Build.PL
+lib/Child.pm
+MANIFEST			This list of files
+META.yml
+README
+t/Child.t
+t/Import.t
