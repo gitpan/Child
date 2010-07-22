@@ -5,3 +5,4 @@ META.yml
 README
 t/Child.t
 t/Import.t
+t/Manage.t
