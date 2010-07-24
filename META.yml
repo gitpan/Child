@@ -15,11 +15,29 @@ name: Child
 provides:
   Child:
     file: lib/Child.pm
-    version: 0.006
+    version: 0.007
+  Child::IPC::Pipe:
+    file: lib/Child/IPC/Pipe.pm
+  Child::Link:
+    file: lib/Child/Link.pm
+  Child::Link::IPC:
+    file: lib/Child/Link/IPC.pm
+  Child::Link::IPC::Pipe:
+    file: lib/Child/Link/IPC/Pipe.pm
+  Child::Link::IPC::Pipe::Parent:
+    file: lib/Child/Link/IPC/Pipe/Parent.pm
+  Child::Link::IPC::Pipe::Proc:
+    file: lib/Child/Link/IPC/Pipe/Proc.pm
+  Child::Link::Parent:
+    file: lib/Child/Link/Parent.pm
+  Child::Link::Proc:
+    file: lib/Child/Link/Proc.pm
+  Child::Util:
+    file: lib/Child/Util.pm
 requires:
   POSIX: 0
 resources:
   bugtracker: http://github.com/exodist/Child/issues
   license: http://dev.perl.org/licenses/
   repository: http://github.com/exodist/Child
-version: 0.006
+version: 0.007

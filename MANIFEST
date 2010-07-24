@@ -1,5 +1,14 @@
 Build.PL
 lib/Child.pm
+lib/Child/IPC/Pipe.pm
+lib/Child/Link.pm
+lib/Child/Link/IPC.pm
+lib/Child/Link/IPC/Pipe.pm
+lib/Child/Link/IPC/Pipe/Parent.pm
+lib/Child/Link/IPC/Pipe/Proc.pm
+lib/Child/Link/Parent.pm
+lib/Child/Link/Proc.pm
+lib/Child/Util.pm
 MANIFEST			This list of files
 META.yml
 README
