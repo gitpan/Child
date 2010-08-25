@@ -3,7 +3,7 @@ abstract: 'Object oriented simple interface to fork()'
 author:
   - 'Chad Granum <exodist7@gmail.com>'
 build_requires:
-  Test::More: 0
+  Test::More: 0.88
 configure_requires:
   Module::Build: 0.36
 generated_by: 'Module::Build version 0.3607'
@@ -15,7 +15,7 @@ name: Child
 provides:
   Child:
     file: lib/Child.pm
-    version: 0.007
+    version: 0.008
   Child::IPC::Pipe:
     file: lib/Child/IPC/Pipe.pm
   Child::Link:
@@ -35,9 +35,12 @@ provides:
   Child::Util:
     file: lib/Child/Util.pm
 requires:
+  Exporter: 5.57
   POSIX: 0
+  perl: 5.006
 resources:
   bugtracker: http://github.com/exodist/Child/issues
+  homepage: http://open-exodus.net/projects/child
   license: http://dev.perl.org/licenses/
   repository: http://github.com/exodist/Child
-version: 0.007
+version: 0.008

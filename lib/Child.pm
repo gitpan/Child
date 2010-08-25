@@ -1,4 +1,5 @@
 package Child;
+use 5.006;
 use strict;
 use warnings;
 use Carp;
@@ -6,9 +7,9 @@ use Child::Util;
 use Child::Link::Proc;
 use Child::Link::Parent;
 
-use base 'Exporter';
+use Exporter 'import';
 
-our $VERSION = "0.007";
+our $VERSION = "0.008";
 our @PROCS;
 our @EXPORT_OK = qw/child/;
 
