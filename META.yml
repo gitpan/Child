@@ -15,7 +15,7 @@ name: Child
 provides:
   Child:
     file: lib/Child.pm
-    version: 0.008
+    version: 0.009
   Child::IPC::Pipe:
     file: lib/Child/IPC/Pipe.pm
   Child::Link:
@@ -43,4 +43,4 @@ resources:
   homepage: http://open-exodus.net/projects/child
   license: http://dev.perl.org/licenses/
   repository: http://github.com/exodist/Child
-version: 0.008
+version: 0.009

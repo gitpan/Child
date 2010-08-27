@@ -12,6 +12,9 @@ DESCRIPTION
     for running, waiting, killing, checking, and even communicating with a
     child process.
 
+    NOTE: kill() is unpredictable on windows, strawberry perl sends the kill
+    signal to the parent as well as the child.
+
 SYNOPSIS
   BASIC
         use Child;
