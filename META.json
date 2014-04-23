@@ -1,0 +1,83 @@
+{
+   "abstract" : "Object oriented simple interface to fork()",
+   "author" : [
+      "Chad Granum <exodist7@gmail.com>"
+   ],
+   "dynamic_config" : 1,
+   "generated_by" : "Module::Build version 0.4205",
+   "license" : [
+      "perl_5"
+   ],
+   "meta-spec" : {
+      "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
+      "version" : "2"
+   },
+   "name" : "Child",
+   "prereqs" : {
+      "build" : {
+         "requires" : {
+            "Capture::Tiny" : "0.22",
+            "Test::More" : "0.88"
+         }
+      },
+      "configure" : {
+         "requires" : {
+            "Module::Build" : "0.42"
+         }
+      },
+      "runtime" : {
+         "requires" : {
+            "Exporter" : "5.57",
+            "POSIX" : "0",
+            "perl" : "5.006"
+         }
+      }
+   },
+   "provides" : {
+      "Child" : {
+         "file" : "lib/Child.pm",
+         "version" : "0.010"
+      },
+      "Child::IPC::Pipe" : {
+         "file" : "lib/Child/IPC/Pipe.pm"
+      },
+      "Child::Link" : {
+         "file" : "lib/Child/Link.pm"
+      },
+      "Child::Link::IPC" : {
+         "file" : "lib/Child/Link/IPC.pm"
+      },
+      "Child::Link::IPC::Pipe" : {
+         "file" : "lib/Child/Link/IPC/Pipe.pm"
+      },
+      "Child::Link::IPC::Pipe::Parent" : {
+         "file" : "lib/Child/Link/IPC/Pipe/Parent.pm"
+      },
+      "Child::Link::IPC::Pipe::Proc" : {
+         "file" : "lib/Child/Link/IPC/Pipe/Proc.pm"
+      },
+      "Child::Link::Parent" : {
+         "file" : "lib/Child/Link/Parent.pm"
+      },
+      "Child::Link::Proc" : {
+         "file" : "lib/Child/Link/Proc.pm"
+      },
+      "Child::Util" : {
+         "file" : "lib/Child/Util.pm"
+      }
+   },
+   "release_status" : "stable",
+   "resources" : {
+      "bugtracker" : {
+         "web" : "http://github.com/exodist/Child/issues"
+      },
+      "homepage" : "http://open-exodus.net/projects/child",
+      "license" : [
+         "http://dev.perl.org/licenses/"
+      ],
+      "repository" : {
+         "url" : "http://github.com/exodist/Child"
+      }
+   },
+   "version" : "0.010"
+}

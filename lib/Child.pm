@@ -9,7 +9,7 @@ use Child::Link::Parent;
 
 use Exporter 'import';
 
-our $VERSION = "0.009";
+our $VERSION = "0.010";
 our @PROCS;
 our @EXPORT_OK = qw/child/;
 
@@ -68,7 +68,13 @@ sub start {
     @PROCS = ();
     my $parent = $self->parent_class->new( $ppid, @data );
     my $code = $self->code;
-    $code->( $parent );
+
+    # Ensure the child code can't die and jump out of our control.
+    eval { $code->( $parent ); 1; } || do {
+        # Simulate die without dying.
+        print STDERR $@;
+        exit 255;
+    };
     exit;
 }
 
@@ -105,10 +111,10 @@ signal to the parent as well as the child.
         ....
         # exit() is called for you at the end.
     });
-    my $proc = $child->start
+    my $proc = $child->start;
 
     # Kill the child if it is not done
-    $proc->complete || $proc->kill(9);
+    $proc->is_complete || $proc->kill(9);
 
     $proc->wait; #blocking
 
@@ -231,7 +237,7 @@ The proc object that is returned by $child->start()
 
 =item L<Child::Link::Parent>
 
-The parent object that is provided as the argumunt to the function used to
+The parent object that is provided as the argument to the function used to
 define the child.
 
 =item L<Child::Link::IPC>
@@ -253,7 +259,7 @@ Together the tools that make up the Fennec framework provide a potent testing
 environment.
 
 The tools provided by Fennec are also useful on their own. Sometimes a tool
-created for Fennec is useful outside the greator framework. Such tools are
+created for Fennec is useful outside the greater framework. Such tools are
 turned into their own projects. This is one such project.
 
 =over 2

@@ -3,10 +3,12 @@ abstract: 'Object oriented simple interface to fork()'
 author:
   - 'Chad Granum <exodist7@gmail.com>'
 build_requires:
+  Capture::Tiny: 0.22
   Test::More: 0.88
 configure_requires:
-  Module::Build: 0.36
-generated_by: 'Module::Build version 0.3607'
+  Module::Build: 0.42
+dynamic_config: 1
+generated_by: 'Module::Build version 0.4205, CPAN::Meta::Converter version 2.120921'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -15,25 +17,34 @@ name: Child
 provides:
   Child:
     file: lib/Child.pm
-    version: 0.009
+    version: 0.010
   Child::IPC::Pipe:
     file: lib/Child/IPC/Pipe.pm
+    version: 0
   Child::Link:
     file: lib/Child/Link.pm
+    version: 0
   Child::Link::IPC:
     file: lib/Child/Link/IPC.pm
+    version: 0
   Child::Link::IPC::Pipe:
     file: lib/Child/Link/IPC/Pipe.pm
+    version: 0
   Child::Link::IPC::Pipe::Parent:
     file: lib/Child/Link/IPC/Pipe/Parent.pm
+    version: 0
   Child::Link::IPC::Pipe::Proc:
     file: lib/Child/Link/IPC/Pipe/Proc.pm
+    version: 0
   Child::Link::Parent:
     file: lib/Child/Link/Parent.pm
+    version: 0
   Child::Link::Proc:
     file: lib/Child/Link/Proc.pm
+    version: 0
   Child::Util:
     file: lib/Child/Util.pm
+    version: 0
 requires:
   Exporter: 5.57
   POSIX: 0
@@ -43,4 +54,4 @@ resources:
   homepage: http://open-exodus.net/projects/child
   license: http://dev.perl.org/licenses/
   repository: http://github.com/exodist/Child
-version: 0.009
+version: 0.010

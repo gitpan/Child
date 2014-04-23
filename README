@@ -24,10 +24,10 @@ SYNOPSIS
             ....
             # exit() is called for you at the end.
         });
-        my $proc = $child->start
+        my $proc = $child->start;
 
         # Kill the child if it is not done
-        $proc->complete || $proc->kill(9);
+        $proc->is_complete || $proc->kill(9);
 
         $proc->wait; #blocking
 
@@ -113,7 +113,7 @@ SEE ALSO
         The proc object that is returned by $child->start()
 
     Child::Link::Parent
-        The parent object that is provided as the argumunt to the function
+        The parent object that is provided as the argument to the function
         used to define the child.
 
     Child::Link::IPC
@@ -132,7 +132,7 @@ FENNEC PROJECT
     a potent testing environment.
 
     The tools provided by Fennec are also useful on their own. Sometimes a
-    tool created for Fennec is useful outside the greator framework. Such
+    tool created for Fennec is useful outside the greater framework. Such
     tools are turned into their own projects. This is one such project.
 
     Fennec - The core framework
